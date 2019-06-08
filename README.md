@@ -1,6 +1,7 @@
-This the official PHP Client for interacting with the Podio API. All parts of the Podio API are covered in this client. See [podio.github.io/podio-php](http://podio.github.io/podio-php) for documentation.
+# Podio PHP client library
 
-[![Build Status](https://travis-ci.org/podio/podio-php.svg?branch=4.0.0)](https://travis-ci.org/podio/podio-php)
+This is the non-official PHP Client for interacting with the Podio API maintained by the Podio community and the continuation of the former official Podio PHP Client. Most parts of the Podio API are covered in this client. See [podio-community.github.io/podio-php](https://podio-community.github.io/podio-php/) for documentation.
 
+To contribute, please read: [the contribution guide](https://github.com/podio-community/podio-php/blob/master/CONTRIBUTING.md).
 
-[![Join the chat at https://gitter.im/podio/podio-php](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/podio/podio-php?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/podio-community/podio-php.svg?branch=master)](https://travis-ci.org/podio-community/podio-php)

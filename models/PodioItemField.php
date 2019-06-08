@@ -119,6 +119,9 @@ class PodioItemField extends PodioObject {
       case 'PodioEmailItemField':
         $this->type = 'email';
         break;
+      case 'PodioTagItemField':
+        $this->type = 'tag';
+        break;
       default:
         break;
     }
@@ -1122,7 +1125,7 @@ class PodioCalculationItemField extends PodioItemField {
   public function __get($name) {
     $attribute = parent::__get($name);
     if ($name == 'values' && $attribute) {
-      return $attribute[0]['value'];
+      return (isset($attribute[0]['value'])) ? $attribute[0]['value'] : $attribute[0];
     }
     return $attribute;
   }
@@ -1219,5 +1222,16 @@ class PodioMoneyItemField extends PodioItemField {
   public function api_friendly_values() {
     return $this->values ? $this->values : null;
   }
+
+}
+
+/**
+  * Tag Field. Undocumented by Podio, but occurs as unremovable default field "Organization" in contact apps.
+  */
+class PodioTagItemField extends PodioItemField {
+
+    public function api_friendly_values() {
+        return $this->values !== null ? $this->values : null;
+    }
 
 }
